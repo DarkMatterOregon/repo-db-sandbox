@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
+using Aka.Mods.Repository;
 
 namespace RepoDbSandbox.Server
 {
@@ -24,6 +25,11 @@ namespace RepoDbSandbox.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            // Configuration
+            services.Configure<Configuration.ApplicationConfig>(Configuration);
+
+            RepoDb.SqlServerBootstrap.Initialize();
+            services.AddTransient<BedRockRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

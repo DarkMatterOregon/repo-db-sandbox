@@ -7,8 +7,8 @@ namespace RepoDbSandbox.Shared.Models
     public class Conference 
     {
         public int ConfId { get; set; }
+        [Column("ConfName")]
         public string Name { get; set; }
 
-      
     }
 }

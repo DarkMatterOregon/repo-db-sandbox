@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols;
 using RepoDb;
+using RepoDbSandbox.Server.Configuration;
 using RepoDbSandbox.Shared.Models;
 
 
@@ -14,12 +16,10 @@ namespace Aka.Mods.Repository
 {
     public class BedRockRepository : DbRepository<SqlConnection>, IConferenceRepository
     {
-
-       
-        public BedRockRepository(IConfiguration configurationManager) : base(
-            configurationManager.GetConnectionString("BedRockConnection"))
+        public BedRockRepository(IOptions<ApplicationConfig> appConfig)
+            : base(appConfig.Value.ConnectionStrings.BedRockConnection)
         {
-            int foo = 1;
+            int foo = 0;
         }
 
         public IEnumerable<Conference> GetConferences()

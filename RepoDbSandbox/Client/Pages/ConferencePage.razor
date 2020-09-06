@@ -1,0 +1,42 @@
+@page "/conference"
+@using RepoDbSandbox.Shared
+@using RepoDbSandbox.Shared.Models
+@inject HttpClient Http
+
+<h1>Conferences</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (conferences == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var conf in conferences)
+            {
+                <tr>
+                    <td>@conf.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Conference[] conferences;
+
+    protected override async Task OnInitializedAsync()
+    {
+        conferences = await Http.GetFromJsonAsync<Conference[]>("Conference");
+    }
+
+}

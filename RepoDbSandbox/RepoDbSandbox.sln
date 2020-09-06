@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoDbSandbox.Server", "Server\RepoDbSandbox.Server.csproj", "{407BEC66-9D12-4372-A630-243E6D7AA16A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoDbSandbox.Server", "Server\RepoDbSandbox.Server.csproj", "{407BEC66-9D12-4372-A630-243E6D7AA16A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoDbSandbox.Client", "Client\RepoDbSandbox.Client.csproj", "{F1470711-8867-4863-8B3A-BFF5E455D9D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoDbSandbox.Client", "Client\RepoDbSandbox.Client.csproj", "{F1470711-8867-4863-8B3A-BFF5E455D9D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoDbSandbox.Shared", "Shared\RepoDbSandbox.Shared.csproj", "{05C3B006-E16C-4703-B95A-F07FC4664865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoDbSandbox.Shared", "Shared\RepoDbSandbox.Shared.csproj", "{05C3B006-E16C-4703-B95A-F07FC4664865}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
